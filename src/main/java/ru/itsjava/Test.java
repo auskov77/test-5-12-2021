@@ -23,23 +23,26 @@ public class Test {
         System.out.println("Строка задом-наперед:");
         System.out.println(reverseInput(input));
 
-        long workingTimeMethod1000 = System.currentTimeMillis();
+        long startTime1000 = System.nanoTime();
         for (int i = 0; i < 1000; i++) {
             reverseInput(input);
         }
-        System.out.println("Время работы метода за 1000 повторений: " + (System.currentTimeMillis()-workingTimeMethod1000));
+        long endTime1000 = System.nanoTime();
+        System.out.println("Время работы метода в мс за 1000 повторений: " + (endTime1000-startTime1000)/1000000);
 
-        long workingTimeMethod10000 = System.currentTimeMillis();
+        long startTime10000 = System.nanoTime();
         for (int i = 0; i < 10000; i++) {
             reverseInput(input);
         }
-        System.out.println("Время работы метода за 10000 повторений: " + (System.currentTimeMillis()-workingTimeMethod10000));
+        long endTime10000 = System.nanoTime();
+        System.out.println("Время работы метода в мс за 10000 повторений: " + (endTime10000-startTime10000)/1000000);
 
-        long workingTimeMethod100000 = System.currentTimeMillis();
+        long startTime100000 = System.nanoTime();
         for (int i = 0; i < 100000; i++) {
             reverseInput(input);
         }
-        System.out.println("Время работы метода за 100000 повторений: " + (System.currentTimeMillis()-workingTimeMethod100000));
+        long endTime100000 = System.nanoTime();
+        System.out.println("Время работы метода в мс за 100000 повторений: " + (endTime100000-startTime100000)/1000000);
 
 
     }
